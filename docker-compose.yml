@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+  baserow:
+    container_name: baserow
+    image: baserow/baserow:1.18.0
+    environment:
+      BASEROW_PUBLIC_URL: 'http://localhost'
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./data:/baserow/data
+
+
